@@ -63,7 +63,7 @@ async function doLoginTwo() {
 	if (login.error) return console.log(login.message);
 	console.log('- login sukses ' + userData.data.username);
 	const inputPost = await prompt.prompt(questionsPost);
-    console.log(inputPost);
+    console.log("- sendang post gambar kamu....");
     
 	const { latitude, longitude, searchQuery } = {
 		latitude: 0.0,
@@ -73,7 +73,7 @@ async function doLoginTwo() {
     };
     const locations = await ig.search.location(latitude, longitude, searchQuery);
 	let mediaLocation = locations[0];
-    console.log(mediaLocation);
+    console.log("Lokasi " + mediaLocation.name);
     
     const publishResult = await ig.publish.photo({
 		// read the file into a Buffer
@@ -81,7 +81,7 @@ async function doLoginTwo() {
 		// optional, default ''
 		caption: inputPost.caption,
     });
-    console.log(publishResult);
+	console.log("status " + publishResult.status);
 
 }
 

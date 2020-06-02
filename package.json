@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "inquirer": "^7.1.0",
     "instagram-private-api": "^1.40.1",
     "prompt": "^1.0.0",
     "prompt-sync": "^4.2.0"
